@@ -10,9 +10,9 @@ export class Connect
 
         const result = await channel.assertQueue("orders");
 
-        channel.sendToQueue("jobs", Buffer.from(JSON.stringify(data)));
+        channel.sendToQueue("orders", Buffer.from(JSON.stringify(data)));
 
-        console.log(`Job sent successfully!!\n ${{data}}`);
+        console.log("Result: " + JSON.stringify(data));
 
         channel.close();
     }
