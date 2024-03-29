@@ -12,8 +12,6 @@ export class Connect
 
         channel.sendToQueue("orders", Buffer.from(JSON.stringify(data)));
 
-        console.log("Result: " + JSON.stringify(data));
-
         channel.close();
     }
 
