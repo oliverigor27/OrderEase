@@ -13,6 +13,10 @@ The Restaurant Order Command Microservice is a component of a larger restaurant 
 - **Order Status Updates**: Updates the status of orders and notifies clients.
 - **RabbitMQ Integration**: Utilizes RabbitMQ for message queuing and communication.
 
+## Service Architecture
+
+![Service Architecture](https://github.com/oliverigor27/oliverigor27/blob/main/Images/order-ease-arch.jpeg)
+
 ## Technologies Used
 
 - **Node.js**: Backend JavaScript runtime environment.
