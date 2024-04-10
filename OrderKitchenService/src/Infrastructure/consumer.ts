@@ -1,5 +1,6 @@
 import { connect } from 'amqplib';
 import { KitchenService } from '../Application/Services/kitchenService';
+import { OrderDTO } from '../Domain/DTO/OrderDTO';
 
 // docker logs -f order_ease
 
@@ -25,7 +26,9 @@ export class Connect
             channel.consume("orders", message => {
                 const result = JSON.parse(message.content.toString());
                 
-                KitchenService.KitchenConsumer(result);
+                const orderObj : OrderDTO = result;
+
+                this.service.KitchenConsumer(orderObj);
 
                 channel.ack(message);
             });
